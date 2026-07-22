@@ -16,15 +16,15 @@ Coming Soon...
 
 ### Login
 
-![Login](./screenshots/login.png)
+![Login](./screenshots/Login.png)
 
 ### Dashboard
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/Dashboard.png)
 
 ### Transactions
 
-![Transactions](./screenshots/transactions.png)
+![Transactions](./screenshots/Transactions.png)
 
 ### Wallets
 
@@ -32,7 +32,7 @@ Coming Soon...
 
 ### Reports
 
-![Reports](./screenshots/reports.png)
+![Reports](./screenshots/Reports.png)
 
 ### Categories
 
@@ -44,7 +44,7 @@ Coming Soon...
 
 ### Settings
 
-![Settings](./screenshots/settings.png)
+![Settings](./screenshots/Settings.png)
 
 ---
 
