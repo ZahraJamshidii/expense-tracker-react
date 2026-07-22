@@ -12,7 +12,39 @@ Coming Soon...
 
 ## 📸 Preview
 
-> Screenshots will be added soon.
+## 📸 Screenshots
+
+### Login
+
+![Login](./screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+### Transactions
+
+![Transactions](./screenshots/transactions.png)
+
+### Wallets
+
+![Wallets](./screenshots/Wallets.png)
+
+### Reports
+
+![Reports](./screenshots/reports.png)
+
+### Categories
+
+![Categories](./screenshots/Categories.png)
+
+### Profile
+
+![Profile](./screenshots/Profile.png)
+
+### Settings
+
+![Settings](./screenshots/settings.png)
 
 ---
 
