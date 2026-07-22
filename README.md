@@ -1,72 +1,115 @@
 # 💰 Expense Tracker Dashboard
 
-A modern Expense Tracker Dashboard built with React.js that helps users manage their personal finances.
+A modern and responsive Expense Tracker Dashboard built with **React.js** that helps users manage their personal finances efficiently.
+
+---
+
+## 🚀 Live Demo
+
+Coming Soon...
+
+---
+
+## 📸 Preview
+
+> Screenshots will be added soon.
 
 ---
 
 ## ✨ Features
 
-- 🔐 User Authentication (Register & Login)
+### 👤 Authentication
+- 🔐 Register
+- 🔓 Login
 - 👤 User Profile
-- 💵 Add Income & Expenses
+
+### 💸 Transaction Management
+- ➕ Add Income
+- ➖ Add Expense
 - ✏️ Edit Transactions
 - 🗑 Delete Transactions
 - 🔍 Search Transactions
 - 🗂 Filter by Category
 - 📅 Filter by Date Range
-- 📊 Pie Chart Reports
-- 📈 Line Chart Reports
-- 📂 Category Management
-- 💾 LocalStorage Persistence
-- 📱 Responsive Design
+
+### 💳 Wallet Management
+- Create Wallets
+- Edit Wallet
+- Delete Wallet
+- Transfer Money Between Wallets
+
+### 📂 Category Management
+- Add Category
+- Edit Category
+- Delete Category
+
+### 📊 Reports
+- 📈 Income & Expense Trend Chart
+- 🥧 Expense By Category Pie Chart
+
+### ⚙️ Settings
+- 🌙 Light / Dark Mode
+- ♻️ Reset All Data
+
+### 💾 Storage
+- LocalStorage Persistence
+
+### 📱 UI
+- Responsive Design
+- Modern Dashboard Layout
 
 ---
 
-## 🛠 Technologies
+# 🛠 Tech Stack
 
 - React.js
 - React Router DOM
-- React Hook Form
+- Redux Toolkit
 - Context API
+- React Hook Form
 - Tailwind CSS
 - Recharts
 - React Icons
+- React Toastify
 - LocalStorage
 - Vite
 
 ---
 
-## 📂 Project Structure
+# 📂 Folder Structure
 
 ```text
 src/
 │
-├── components
-├── context
-├── hooks
-├── layouts
-├── pages
-├── routes
-└── utils
+├── components/
+├── context/
+├── features/
+├── hooks/
+├── layouts/
+├── pages/
+├── redux/
+├── routes/
+├── theme/
+└── utils/
 ```
 
 ---
 
-## 🚀 Installation
+# ⚡ Getting Started
 
-Clone the repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/expense-tracker-react.git
+git clone https://github.com/ZahraJamshidii/expense-tracker-react.git
 ```
 
-Install dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Run the project
+### Start Development Server
 
 ```bash
 npm run dev
@@ -74,15 +117,20 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
+# 🎯 Future Improvements
 
-Screenshots will be added soon.
+- Currency Selection
+- Recurring Transactions
+- Budget Planning
+- Monthly Notifications
+- Cloud Database
+- Multi-language Support
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
-**Zahra Jamshidi**
+### Zahra Jamshidi
 
 Junior Front-End Developer
 

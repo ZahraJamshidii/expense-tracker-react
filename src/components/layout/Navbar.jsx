@@ -54,16 +54,26 @@ function Navbar() {
 
         </div>
 
-      <button
-        onClick={handleLogout}
-        className="text-white px-5 py-2 rounded-xl transition-all duration-300 hover:scale-105 hover:brightness-110"
-        style={{
-          background: "var(--primary)",
-          boxShadow: "0 6px 18px rgba(37,99,235,.25)",
-        }}
-      >
-        Logout
-      </button>
+<button
+  onClick={handleLogout}
+  className="
+    text-white
+    px-5
+    py-2
+    rounded-lg
+    transition-all
+    duration-300
+    hover:scale-105
+  "
+  style={{
+    backgroundColor: "#f97316", // نارنجی
+    boxShadow: "0 6px 18px rgba(249,115,22,.35)",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#c2410c")}
+  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#f97316")}
+>
+  Logout
+</button>
 
       </div>
 
