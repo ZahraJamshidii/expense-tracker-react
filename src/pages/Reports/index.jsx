@@ -5,7 +5,7 @@ function Reports() {
   return (
     <div>
 
-      <h1 className="text-4xl font-bold mb-8">
+      <h1 className="theme-title text-4xl font-bold mb-8">
         Reports
       </h1>
 

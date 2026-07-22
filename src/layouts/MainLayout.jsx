@@ -2,10 +2,21 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "../components/layout/Sidebar";
 import Navbar from "../components/layout/Navbar";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function MainLayout() {
+
+    const mode = useSelector(
+      (state) => state.theme.mode
+    );
+
+    useEffect(() => {
+      document.body.className = mode;
+    }, [mode]);
+
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="theme-page flex min-h-screen">
 
       <Sidebar />
 

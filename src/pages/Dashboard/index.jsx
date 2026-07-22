@@ -7,11 +7,11 @@ function Dashboard() {
 
       <header>
 
-        <h1 className="text-4xl font-bold">
+        <h1 className="theme-title text-4xl font-bold">
           Dashboard
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="theme-muted mt-2">
           Welcome back! Here's your financial overview.
         </p>
 

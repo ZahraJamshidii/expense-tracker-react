@@ -68,7 +68,7 @@ function Profile() {
   return (
     <div className="max-w-6xl mx-auto">
 
-      <h1 className="text-4xl font-bold mb-8">
+      <h1 className="theme-title text-4xl font-bold mb-8">
         My Profile
       </h1>
 
@@ -78,7 +78,7 @@ function Profile() {
 
         <div>
 
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="theme-card rounded-3xl shadow-xl overflow-hidden">
 
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 h-32"></div>
 
@@ -106,7 +106,7 @@ function Profile() {
 
               ) : (
 
-                <h2 className="text-2xl font-bold mt-4">
+                <h2 className="theme-title text-2xl font-bold mt-4">
                   {currentUser.name}
                 </h2>
 
@@ -139,7 +139,7 @@ function Profile() {
 
                     <button
                       onClick={handleCancel}
-                      className="bg-gray-300 hover:bg-gray-400 px-6 py-3 rounded-xl"
+                      className="theme-button px-6 py-3 rounded-xl opacity-70 hover:opacity-100"
                     >
                       Cancel
                     </button>
@@ -160,9 +160,9 @@ function Profile() {
 
         <div className="lg:col-span-2 space-y-6">
 
-          <div className="bg-white rounded-3xl shadow-xl p-8">
+          <div className="theme-card rounded-3xl shadow-xl p-8">
 
-            <h2 className="text-2xl font-bold mb-8">
+            <h2 className="theme-title text-2xl font-bold mb-8">
               Personal Information
             </h2>
 
@@ -174,7 +174,7 @@ function Profile() {
 
                 <div className="flex-1">
 
-                  <p className="text-gray-500 mb-2">
+                  <p className="theme-muted mb-2">
                     Email
                   </p>
 
@@ -191,7 +191,7 @@ function Profile() {
 
                   ) : (
 
-                    <p className="font-semibold">
+                    <p className="theme-title font-semibold">
                       {currentUser.email}
                     </p>
 
@@ -207,7 +207,7 @@ function Profile() {
 
                 <div>
 
-                  <p className="text-gray-500">
+                  <p className="theme-muted">
                     Status
                   </p>
 
@@ -225,7 +225,7 @@ function Profile() {
 
                 <div>
 
-                  <p className="text-gray-500">
+                  <p className="theme-muted">
                     User ID
                   </p>
 
@@ -241,9 +241,9 @@ function Profile() {
 
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8">
+          <div className="theme-card rounded-3xl shadow-xl p-8">
 
-            <h2 className="text-2xl font-bold mb-8">
+            <h2 className="theme-title text-2xl font-bold mb-8">
               Financial Summary
             </h2>
 
@@ -279,13 +279,18 @@ function Profile() {
 
             </div>
 
-            <div className="mt-6 bg-gray-50 rounded-2xl p-6 flex items-center gap-4">
+            <div
+              className="theme-card mt-6 rounded-2xl p-6"
+              style={{
+                border: "1px solid rgba(148,163,184,.15)",
+              }}
+            >
 
               <FaListAlt className="text-orange-500 text-3xl" />
 
               <div>
 
-                <p className="text-gray-500">
+                <p className="theme-muted">
                   Total Transactions
                 </p>
 
@@ -311,31 +316,38 @@ function SummaryCard({
   icon,
   title,
   value,
-  color,
 }) {
   return (
-    <div className={`bg-${color}-50 rounded-2xl p-6`}>
-
+    <div
+      className="theme-card rounded-2xl p-6"
+      style={{
+        border: "1px solid rgba(148,163,184,.15)",
+      }}
+    >
       <div className="flex items-center gap-3">
 
-        <div className={`text-${color}-600 text-2xl`}>
+        <div
+          className="text-2xl"
+          style={{
+            color: "var(--primary)",
+          }}
+        >
           {icon}
         </div>
 
         <div>
 
-          <p className="text-gray-500">
+          <p className="theme-muted">
             {title}
           </p>
 
-          <h3 className="text-2xl font-bold">
+          <h3 className="theme-title text-2xl font-bold">
             {value}
           </h3>
 
         </div>
 
       </div>
-
     </div>
   );
 }

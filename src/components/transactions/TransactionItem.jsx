@@ -20,30 +20,37 @@ function TransactionItem({ transaction }) {
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-5 flex justify-between items-center">
+    <div className="theme-card rounded-xl shadow-md p-5 flex justify-between items-center transition hover:shadow-lg">
+
+      {/* Left */}
 
       <div>
-        <h3 className="font-bold text-lg">
+
+        <h3 className="theme-title text-lg font-bold">
           {transaction.title}
         </h3>
 
-        <p className="text-gray-500">
+        <p className="theme-muted">
           {transaction.category}
         </p>
 
-        <p className="text-gray-400 text-sm">
+        <p className="theme-soft text-sm">
           {transaction.date}
         </p>
+
       </div>
+
+      {/* Right */}
 
       <div className="flex items-center gap-5">
 
         <span
-          className={`text-xl font-bold ${
-            isIncome
-              ? "text-green-600"
-              : "text-red-600"
-          }`}
+          className="text-xl font-bold"
+          style={{
+            color: isIncome
+              ? "#22C55E"
+              : "#EF4444",
+          }}
         >
           {isIncome ? "+" : "-"}$
           {transaction.amount.toLocaleString()}
@@ -51,8 +58,12 @@ function TransactionItem({ transaction }) {
 
         <button
           onClick={handleEdit}
-          className="text-blue-500 hover:text-blue-700 transition"
           title="Edit Transaction"
+          className="w-10 h-10 rounded-lg flex items-center justify-center transition hover:brightness-95"
+          style={{
+            background: "#F59E0B",
+            color: "white",
+          }}
         >
           <FaEdit />
         </button>
@@ -61,8 +72,12 @@ function TransactionItem({ transaction }) {
           onClick={() =>
             deleteTransaction(transaction.id)
           }
-          className="text-red-500 hover:text-red-700 transition"
           title="Delete Transaction"
+          className="w-10 h-10 rounded-lg flex items-center justify-center transition hover:brightness-95"
+          style={{
+            background: "#EF4444",
+            color: "white",
+          }}
         >
           <FaTrash />
         </button>

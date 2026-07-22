@@ -2,6 +2,7 @@ import useFinance from "../../hooks/useFinance";
 import RecentTransactionItem from "./RecentTransactionItem";
 
 function RecentTransactions() {
+
   const { transactions } = useFinance();
 
   const recentTransactions = [...transactions]
@@ -16,11 +17,11 @@ function RecentTransactions() {
 
       <div className="flex justify-between items-center mb-6">
 
-        <h2 className="text-2xl font-bold">
+        <h2 className="theme-title text-2xl font-bold">
           Recent Transactions
         </h2>
 
-        <span className="text-gray-500 text-sm">
+        <span className="theme-muted text-sm">
           Last 5 records
         </span>
 
@@ -28,7 +29,7 @@ function RecentTransactions() {
 
       {recentTransactions.length === 0 ? (
 
-        <div className="bg-white rounded-xl shadow-md p-8 text-center text-gray-500">
+        <div className="theme-card rounded-xl shadow-md p-8 text-center theme-muted">
           No transactions found
         </div>
 

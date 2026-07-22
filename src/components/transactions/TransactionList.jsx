@@ -2,14 +2,14 @@ import useFinance from "../../hooks/useFinance";
 import TransactionItem from "./TransactionItem";
 
 function TransactionList() {
-const {
-  transactions,
-  searchText,
-  selectedCategory,
-  selectedType,
-  fromDate,
-  toDate,
-} = useFinance();
+  const {
+    transactions,
+    searchText,
+    selectedCategory,
+    selectedType,
+    fromDate,
+    toDate,
+  } = useFinance();
 
   const filteredTransactions = [...transactions]
     .sort(
@@ -28,31 +28,31 @@ const {
           .toString()
           .includes(searchText);
 
-const categoryMatch =
-  selectedCategory === "All" ||
-  transaction.category === selectedCategory;
+      const categoryMatch =
+        selectedCategory === "All" ||
+        transaction.category === selectedCategory;
 
-const typeMatch =
-  selectedType === "All" ||
-  transaction.type === selectedType;
+      const typeMatch =
+        selectedType === "All" ||
+        transaction.type === selectedType;
 
-// بررسی بازه زمانی
-const transactionDate = new Date(transaction.date);
-const fromMatch =
-  !fromDate ||
-  transactionDate >= new Date(fromDate);
+      const transactionDate = new Date(transaction.date);
 
-const toMatch =
-  !toDate ||
-  transactionDate <= new Date(toDate);
+      const fromMatch =
+        !fromDate ||
+        transactionDate >= new Date(fromDate);
 
-return (
-  (titleMatch || amountMatch) &&
-  categoryMatch &&
-  typeMatch &&
-  fromMatch &&
-  toMatch
-);
+      const toMatch =
+        !toDate ||
+        transactionDate <= new Date(toDate);
+
+      return (
+        (titleMatch || amountMatch) &&
+        categoryMatch &&
+        typeMatch &&
+        fromMatch &&
+        toMatch
+      );
     });
 
   return (
@@ -60,11 +60,11 @@ return (
 
       <div className="flex justify-between items-center mb-5">
 
-        <h2 className="text-2xl font-bold">
+        <h2 className="theme-title text-2xl font-bold">
           All Transactions
         </h2>
 
-        <span className="text-gray-500">
+        <span className="theme-muted">
           {filteredTransactions.length} Transactions
         </span>
 
@@ -72,8 +72,12 @@ return (
 
       {filteredTransactions.length === 0 ? (
 
-        <div className="bg-white rounded-xl shadow-md p-8 text-center text-gray-500">
-          No transactions found
+        <div className="theme-card rounded-xl shadow-md p-10 text-center">
+
+          <p className="theme-muted text-lg">
+            No transactions found
+          </p>
+
         </div>
 
       ) : (

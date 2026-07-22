@@ -6,17 +6,23 @@ function SummaryCard({
   change,
 }) {
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-
+    <div
+      className="rounded-2xl p-6 transition-all duration-300 hover:shadow-xl"
+      style={{
+        background: "var(--card)",
+        color: "var(--text)",
+        boxShadow: "0 4px 12px rgba(0,0,0,.08)",
+      }}
+    >
       <div className="flex justify-between items-center">
 
         <div>
 
-          <p className="text-gray-500 text-sm">
+          <p className="theme-muted text-sm">
             {title}
           </p>
 
-          <h2 className="text-3xl font-bold mt-2">
+          <h2 className="theme-title text-3xl font-bold mt-2">
             {amount}
           </h2>
 
@@ -42,16 +48,15 @@ function SummaryCard({
 
       <div className="mt-6 flex justify-between items-center">
 
-        <span className="text-green-600 font-semibold">
+        <span className="text-green-500 font-semibold">
           {change}
         </span>
 
-        <span className="text-gray-400 text-sm">
+        <span className="theme-soft text-sm">
           Updated now
         </span>
 
       </div>
-
     </div>
   );
 }

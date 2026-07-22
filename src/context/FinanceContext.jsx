@@ -149,6 +149,13 @@ useEffect(() => {
     ]);
   }
 
+  function addTransactions(newTransactions) {
+  setTransactions((prev) => [
+    ...newTransactions,
+    ...prev,
+  ]);
+}
+
 function addCategory(categoryName) {
 
   const exists = categories.some(
@@ -294,6 +301,31 @@ function updateCategory(updatedCategory) {
   const balance =
     totalIncome - totalExpense;
 
+
+function resetAllData() {
+  // برگرداندن اطلاعات به حالت اولیه
+  setTransactions(DEFAULT_TRANSACTIONS);
+
+  setCategories(DEFAULT_CATEGORIES);
+
+  setEditingTransaction(null);
+  setEditingCategory(null);
+
+  setSearchText("");
+  setSelectedCategory("All");
+  setSelectedType("All");
+  setFromDate("");
+  setToDate("");
+
+  // پاک کردن اطلاعات ذخیره شده
+  localStorage.removeItem("transactions");
+  localStorage.removeItem("categories");
+
+  // اگر خواستی Wallet ها هم ریست شوند
+  localStorage.removeItem("wallets");
+}
+
+
   const value = useMemo(
     () => ({
       transactions,
@@ -325,6 +357,7 @@ function updateCategory(updatedCategory) {
     
 
       addTransaction,
+      addTransactions,
       deleteTransaction,
       updateTransaction,
 
@@ -335,6 +368,8 @@ function updateCategory(updatedCategory) {
       totalIncome,
       totalExpense,
       balance,
+
+      resetAllData,
     }),
     [
     transactions,

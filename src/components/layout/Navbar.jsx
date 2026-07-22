@@ -15,9 +15,17 @@ function Navbar() {
   }
 
   return (
-    <header className="flex items-center justify-between bg-white border-b border-gray-200 px-6 py-4">
+      <header
+        className="flex items-center justify-between px-6 py-4 transition-all duration-300 shadow-sm"
+          style={{
+            background: "var(--card)",
+            color: "var(--text)",
+            borderBottom: "1px solid rgba(148,163,184,.15)",
+            boxShadow: "0 2px 10px rgba(0,0,0,.08)",
+          }}
+      >
 
-      <h2 className="text-xl font-semibold">
+      <h2 className="theme-title text-xl font-semibold">
         Dashboard
       </h2>
 
@@ -25,22 +33,37 @@ function Navbar() {
 
         <div className="text-right">
 
-          <p className="font-semibold">
+          <p
+                className="font-semibold"
+                style={{
+                  color: "var(--text)",
+                }}
+              >
             {currentUser?.name}
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p
+            style={{
+              color: "var(--text)",
+              opacity: .82,
+              fontSize: "14px",
+            }}
+          >
             {currentUser?.email}
           </p>
 
         </div>
 
-        <button
-          onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
-        >
-          Logout
-        </button>
+      <button
+        onClick={handleLogout}
+        className="text-white px-5 py-2 rounded-xl transition-all duration-300 hover:scale-105 hover:brightness-110"
+        style={{
+          background: "var(--primary)",
+          boxShadow: "0 6px 18px rgba(37,99,235,.25)",
+        }}
+      >
+        Logout
+      </button>
 
       </div>
 

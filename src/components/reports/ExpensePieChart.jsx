@@ -44,9 +44,9 @@ function ExpensePieChart() {
   );
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
+    <div className="theme-card rounded-2xl shadow-lg p-6">
 
-      <h2 className="text-2xl font-bold mb-6">
+      <h2 className="theme-title text-2xl font-bold mb-6">
         Expense By Category
       </h2>
 
@@ -67,17 +67,28 @@ function ExpensePieChart() {
               <Cell
                 key={entry.name}
                 fill={
-                  COLORS[
-                    index % COLORS.length
-                  ]
+                  COLORS[index % COLORS.length]
                 }
               />
             ))}
           </Pie>
 
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              background: "var(--card)",
+              border: "1px solid rgba(148,163,184,.2)",
+              color: "var(--text)",
+            }}
+            labelStyle={{
+              color: "var(--text)",
+            }}
+          />
 
-          <Legend />
+          <Legend
+            wrapperStyle={{
+              color: "var(--text)",
+            }}
+          />
 
         </PieChart>
       </ResponsiveContainer>

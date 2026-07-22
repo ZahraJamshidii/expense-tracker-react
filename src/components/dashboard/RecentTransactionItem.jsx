@@ -1,21 +1,23 @@
 function RecentTransactionItem({ transaction }) {
+
   const isIncome =
     transaction.type === "income";
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-5 flex justify-between items-center">
+
+    <div className="theme-card rounded-xl shadow-md p-5 flex justify-between items-center">
 
       <div>
 
-        <h3 className="font-bold text-lg">
+        <h3 className="theme-title font-bold text-lg">
           {transaction.title}
         </h3>
 
-        <p className="text-gray-500">
+        <p className="theme-muted">
           {transaction.category}
         </p>
 
-        <p className="text-gray-400 text-sm">
+        <p className="theme-soft text-sm">
           {transaction.date}
         </p>
 
@@ -24,8 +26,8 @@ function RecentTransactionItem({ transaction }) {
       <span
         className={`text-xl font-bold ${
           isIncome
-            ? "text-green-600"
-            : "text-red-600"
+            ? "text-green-500"
+            : "text-red-500"
         }`}
       >
         {isIncome ? "+" : "-"}$
@@ -33,6 +35,7 @@ function RecentTransactionItem({ transaction }) {
       </span>
 
     </div>
+
   );
 }
 

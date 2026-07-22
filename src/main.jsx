@@ -1,23 +1,41 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import UserProvider from "./context/UserContext";
+import { Provider } from "react-redux";
 
 import "./index.css";
 
 import router from "./routes/AppRouter";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import UserProvider from "./context/UserContext";
 import FinanceProvider from "./context/FinanceContext";
+import { store } from "./redux/store";
+import ThemeProvider from "./ThemeProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserProvider>
+  <Provider store={store}>
 
-      <FinanceProvider>
+  <UserProvider>
 
-        <RouterProvider router={router} />
+    <FinanceProvider>
+        <ThemeProvider>
 
-      </FinanceProvider>
+      <RouterProvider router={router} />
+      
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        theme="colored"
+      />
 
-    </UserProvider>
-  </StrictMode>
+      </ThemeProvider>
+    </FinanceProvider>
+
+  </UserProvider>
+
+</Provider>
+</StrictMode>
 );

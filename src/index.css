@@ -1,1 +1,65 @@
 @import "tailwindcss";
+
+:root {
+  --primary: #2563EB;
+  --secondary: #60A5FA;
+  --background: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #0F172A;
+}
+
+/* ---------- Theme Classes ---------- */
+
+.theme-page {
+  background: var(--background);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.theme-card {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.theme-title {
+  color: var(--text);
+}
+
+.theme-text {
+  color: var(--text);
+}
+
+.theme-button {
+  background: var(--primary);
+  color: white;
+}
+
+.theme-muted {
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.theme-soft {
+  color: var(--text);
+  opacity: 0.65;
+}
+
+/* ---------- Light Theme ---------- */
+
+.light {
+  --background: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --primary: #2563EB;
+}
+
+/* ---------- Dark Theme ---------- */
+
+.dark {
+  --background: #0F172A;
+  --card: #1E293B;
+  --text: #F8FAFC;
+  --primary: #60A5FA;
+}

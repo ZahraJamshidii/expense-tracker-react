@@ -40,9 +40,9 @@ function IncomeExpenseLineChart() {
   );
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 mt-8">
+    <div className="theme-card rounded-2xl shadow-lg p-6 mt-8">
 
-      <h2 className="text-2xl font-bold mb-6">
+      <h2 className="theme-title text-2xl font-bold mb-6">
         Income & Expense Trend
       </h2>
 
@@ -53,15 +53,40 @@ function IncomeExpenseLineChart() {
 
         <LineChart data={data}>
 
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid
+            stroke="rgba(148,163,184,.25)"
+            strokeDasharray="3 3"
+          />
 
-          <XAxis dataKey="date" />
+          <XAxis
+            dataKey="date"
+            tick={{
+              fill: "var(--text)",
+            }}
+          />
 
-          <YAxis />
+          <YAxis
+            tick={{
+              fill: "var(--text)",
+            }}
+          />
 
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              background: "var(--card)",
+              border: "1px solid rgba(148,163,184,.2)",
+              color: "var(--text)",
+            }}
+            labelStyle={{
+              color: "var(--text)",
+            }}
+          />
 
-          <Legend />
+          <Legend
+            wrapperStyle={{
+              color: "var(--text)",
+            }}
+          />
 
           <Line
             type="monotone"
