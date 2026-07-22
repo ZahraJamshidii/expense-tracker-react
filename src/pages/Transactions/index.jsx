@@ -1,7 +1,7 @@
 import TransactionForm from "../../components/transactions/TransactionForm";
 import TransactionList from "../../components/transactions/TransactionList";
 import TransactionFilter from "../../components/transactions/TransactionFilter";
-import ExportButtons from "../../components/export/ExportButtons";
+import ExportButtons from "../../components/Export/ExportButtons";
 
 function Transactions() {
   return (
