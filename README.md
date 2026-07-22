@@ -6,7 +6,7 @@ A modern and responsive Expense Tracker Dashboard built with **React.js** that h
 
 ## 🚀 Live Demo
 
-Coming Soon...
+👉 https://expense-tracker-react-dmfa.vercel.app
 
 ---
 
